@@ -34,12 +34,11 @@ const initialState = {
       total: 9879,
       duration: 48,
     }
-  ]
+  ],
+  user: "default",
 }
 
-const store = createStore(combineReducers, {
-  bikes: initialState.bikes,
-});
+const store = createStore(combineReducers, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
