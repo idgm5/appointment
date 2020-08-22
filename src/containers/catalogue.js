@@ -3,20 +3,26 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Catalogue = props => {
-  const { bikes, user } = props;
+  const { bikes, user, history } = props;
 
+  function isLoggedIn() {
+    if (user === "default") {
+      return (
+        <a href="/">You're not signed in, please login with your username in order to view this page.</a>
+      );
+    }
+    return (bikes.map(bike => (
+              <div className="category-element" key={bike.model}>
+                <ul>
+                  <li><h2 onClick={() => history.push((`/bike/${bike.model}`))}>{bike.model}</h2></li>
+                  <li><p>{bike.description}</p></li>
+                </ul>
+              </div>
+            )));
+  }
   return (
     <div id="catalogue">
-      <h1>Welcome back, {user}!</h1>
-
-      {bikes.map(bike => (
-        <div className="category-element" key={bike.model}>
-          <ul>
-            <li><h2 onClick={() => window.location.href = (`/bike/${bike.model}`)}>{bike.model}</h2></li>
-            <li><p>{bike.description}</p></li>
-          </ul>
-        </div>
-      ))}
+      {isLoggedIn()}
     </div>
   );
 };
