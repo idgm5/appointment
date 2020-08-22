@@ -7,8 +7,6 @@ const Details = props => {
   const { bikes, user } = props;
   const { model } = props.match.params;
 
-  console.log(user);
-  
   function isLoggedIn() {
     if (user === "default") {
       return (
