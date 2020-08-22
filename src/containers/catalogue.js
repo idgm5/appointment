@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 
 const Catalogue = props => {
   const { bikes, user } = props;
-  console.log(user);
-  
+
   return (
     <div id="catalogue">
       <h1>Welcome back, {user}!</h1>
