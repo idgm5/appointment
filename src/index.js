@@ -36,6 +36,7 @@ const initialState = {
     }
   ],
   user: "default",
+  appointments: [],
 }
 
 const store = createStore(combineReducers, initialState);
