@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Appointments = props => {
-  const { appointments, history, user } = props;
+  const { appointments, user } = props;
   let appointmentId = 0;
 
   function isLoggedIn() {
