@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { NEW_APPOINTMENT } from '../actions/index';
 
 const Details = props => {
-  const { bikes, user, addAppointment} = props;
+  const { bikes, user, addAppointment, history} = props;
   const [currentCity, setCity] = useState({city: "Mexico City"});
   const { model } = props.match.params;
   const cities = ['Mexico City', 'Mérida', 'New York', 'London', 'Madrid', 'Río de Janeiro', 'Buenos Aires', 'Lima', 'Santiago', 'Abuya'];
@@ -23,6 +23,7 @@ const Details = props => {
       date: event.target.date.value,
     };
     addAppointment(appointment);
+    history.push((`/appointments`));
   }
 
   function isLoggedIn() {
