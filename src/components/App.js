@@ -7,9 +7,7 @@ import Appointments from '../containers/appointments';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="App container">
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/:user/catalogue" component={Catalogue}/>
