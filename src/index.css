@@ -93,18 +93,15 @@ code {
   align-items: center;
   border-radius: 20px;
   padding: 0 0.4rem;
+  cursor: pointer;
 }
 
 #icon-bars {
   font-size: 35px;
   color: white;
+  cursor: pointer;
 }
 
 #icon-loop {
   color: #e8c42e;
-}
-
-#icon-bars,
-#icon-loop {
-  cursor: pointer;
 }
