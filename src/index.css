@@ -22,7 +22,7 @@ code {
   height: 100vh;
 }
 
-#loginForm {
+.login {
   height: 100%;
   background-color: #e8c42e;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url("/vespa_bg.png");
@@ -31,8 +31,13 @@ code {
   background-position: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #loginForm > h1 {
@@ -63,5 +68,43 @@ code {
   border-left: 1px solid white;
   padding-left: 1rem;
   margin-left: -1rem;
+  cursor: pointer;
+}
+
+.login-icons {
+  position: absolute;
+  top: 0;
+  width: 1240px;
+  margin-left: 2rem;
+}
+
+.login-icons > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.login-icons > div > span {
+  width: 35px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 0.4rem;
+}
+
+#icon-bars {
+  font-size: 35px;
+  color: white;
+}
+
+#icon-loop {
+  color: #e8c42e;
+}
+
+#icon-bars,
+#icon-loop {
   cursor: pointer;
 }
