@@ -20,7 +20,7 @@ const Details = props => {
       user: event.target.username.value,
       model: event.target.model.value,
       city: currentCity.city,
-      date: event.target.date.value,
+      date: event.target.date.value ? event.target.date.value : "2020-08-01",
     };
     addAppointment(appointment);
     history.push((`/appointments`));
@@ -44,14 +44,14 @@ const Details = props => {
         <form id="appointment" name="appointment" onSubmit={handleSubmit}>
           <h1>Would you like to make an appointment to try this bike?</h1>
           <div>
-            <input type="hidden" id="username" name="username" value={user} />
+            <input type="hidden" id="username" name="username" value={user}/>
             <input type="hidden" id="model" name="model" value={bike.model}/>
             <select name="cityName" id="cityName" onChange={event => handleChange(event, 'city')}>
               { cities.map(city => (
                 <option key={city} value={city}>{ city }</option>
               )) }
             </select>
-            <input type="date" id="start" name="date" min="2020-08-01" max="2021-12-31" />
+            <input type="date" id="start" name="date" min="2020-08-01" max="2021-12-31"/>
             <input type="submit" value="Make appointment" id="submitBtn" />
           </div>
         </form>
