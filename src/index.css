@@ -24,10 +24,10 @@ code {
 
 .login {
   height: 100%;
-  background-color: #e8c42e;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url("/vespa_bg.png");
+  background-color: #ffb400;
+  background-image: url("/vespa_bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 160vh;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ code {
 }
 
 #loginForm > div {
-  border: 2px solid white;
+  border: 1px solid transparent;
   background: #96bf1e;
   border-radius: 50px;
   padding: 1rem;
