@@ -10,7 +10,7 @@ const Catalogue = props => {
   function isLoggedIn() {
     if (user === "default") {
       return (
-        <a href="/">You're not signed in, please login with your username in order to view this page.</a>
+        <a href="/" id="back-login">You're not signed in, please login with your username in order to view this page.</a>
       );
     }
     return (

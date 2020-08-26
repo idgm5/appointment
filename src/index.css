@@ -346,3 +346,19 @@ code {
   background-color: #e2e3e5 !important;
   border-color: lightgray !important;
 }
+
+.back-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+#back-login {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
