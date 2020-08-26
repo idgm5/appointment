@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@font-face {
+  font-family: 'Vespa';
+  src: url('/vespa.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 body {
   margin: 0;
@@ -104,4 +108,65 @@ code {
 
 #icon-loop {
   color: #e8c42e;
+}
+
+#catalogue {
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: white;
+  overflow-x: hidden;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-links a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  padding: 0.7rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-links > h1 {
+  font-family: 'Vespa', sans-serif;
+  color: #595959;
+  margin-bottom: 40%;
+  transform: rotate(-10deg);
+  padding: 0 1rem;
+}
+
+.sidebar a:hover {
+  color: white;
+  background-color: #ffb400;
+}
+
+.social-icons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.social-icons > #social-icon {
+  color: black;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 14px;
+}
+
+.social-icons > p {
+  color: gray;
+  font-size: 12px;
 }
