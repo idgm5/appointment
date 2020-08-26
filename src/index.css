@@ -111,7 +111,8 @@ code {
 }
 
 #catalogue,
-#details-page {
+#details-page,
+#appointments {
   height: 100%;
 }
 
@@ -310,9 +311,38 @@ code {
   background-color: lightgray;
   appearance: none;
   text-align: center;
+  cursor: pointer;
 }
 
 .bike-data form > div > input:last-child {
   background-color: #97bf0f;
   color: white;
+}
+
+#list-appointments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  text-align: center;
+}
+
+#list-appointments ul {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#list-appointments ul > li {
+  width: 150px;
+  text-align: center;
+  background-color: lightgray;
+}
+#list-appointments ul > li:not(:last-child) {
+  border-right: 1px solid darkgray;
+}
+
+.lightgray {
+  background-color: #e2e3e5 !important;
+  border-color: lightgray !important;
 }
