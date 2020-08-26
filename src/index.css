@@ -374,7 +374,8 @@ code {
   .catalogue-element,
   .details-element > img,
   .bike-data,
-  .details-element {
+  .details-element,
+  #list-appointments ul > li {
     width: 100%;
   }
 
@@ -416,5 +417,9 @@ code {
 
   .bike-data form > h1 {
     font-size: 16px;
+  }
+
+  #list-appointments ul {
+    padding: 0;
   }
 }

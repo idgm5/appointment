@@ -37,7 +37,7 @@ const Appointments = props => {
       </div>
       <div id="list-appointments">
       <h2>Appointments</h2>
-      <ul id="table">
+      <ul className="table-desktop">
       <li><h3>Id</h3></li>
       <li><h3>Model</h3></li>
       <li><h3>City</h3></li>
