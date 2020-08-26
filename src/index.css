@@ -390,4 +390,17 @@ code {
   #loginForm > h1 {
     text-align: center;
   }
+  
+  .sidebar {
+    display: none;
+  }
+
+  .menu,
+  .bikes {
+    flex-direction: column;
+  }
+
+  .catalogue-element {
+    width: 100%;
+  }
 }
