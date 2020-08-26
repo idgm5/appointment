@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { NEW_APPOINTMENT } from '../actions/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faFacebookF, faGoogle, faTwitter, faPinterest, faVk} from "@fortawesome/free-brands-svg-icons";
 
 const Details = props => {
   const { bikes, user, addAppointment, history} = props;
@@ -27,36 +29,61 @@ const Details = props => {
   }
 
   function isLoggedIn() {
-    if (user === "default") {
-      return (
-        <a href="/">You're not signed in, please login with your username in order to view this page.</a>
-      );
-    }
-    return (bikes.filter(bike => bike.model === model ).map(bike => (
-      <div className="details-element" key={bike.model}>
-        <ul>
-          <li><h2>{bike.model}</h2></li>
-          <li><h3>Finance fees: ${bike.finance}</h3></li>
-          <li><h3>Option to purchase fee: ${bike.option}</h3></li>
-          <li><h3>Total ammount payable: ${bike.total}</h3></li>
-          <li><h3>Duration: {bike.duration} months</h3></li>
-        </ul>
-        <form id="appointment" name="appointment" onSubmit={handleSubmit}>
-          <h1>Would you like to make an appointment to try this bike?</h1>
-          <div>
-            <input type="hidden" id="username" name="username" value={user}/>
-            <input type="hidden" id="model" name="model" value={bike.model}/>
-            <select name="cityName" id="cityName" onChange={event => handleChange(event, 'city')}>
-              { cities.map(city => (
-                <option key={city} value={city}>{ city }</option>
-              )) }
-            </select>
-            <input type="date" id="start" name="date" min="2020-08-01" max="2021-12-31"/>
-            <input type="submit" value="Make appointment" id="submitBtn" />
-          </div>
-        </form>
+    // if (user === "default") {
+    //   return (
+    //     <a href="/">You're not signed in, please login with your username in order to view this page.</a>
+    //   );
+    // }
+    return (
+      <div className="menu">
+      <div className="sidebar">
+        <div className="sidebar-links">
+          <h1>Scespa</h1>
+          <a href="#">Models</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Shop</a>
+          <a href="#">Test Drive</a>
+        </div>
+        <div className="social-icons">
+          <FontAwesomeIcon icon={faTwitter} id="social-icon"/>
+          <FontAwesomeIcon icon={faGoogle} id="social-icon"/>
+          <FontAwesomeIcon icon={faFacebookF} id="social-icon"/>
+          <FontAwesomeIcon icon={faPinterest} id="social-icon"/>
+          <FontAwesomeIcon icon={faVk} id="social-icon"/>
+          <p>© 2020 Isaac González</p>
+        </div>
       </div>
-    )));
+        {bikes.filter(bike => bike.model === model ).map(bike => (
+        <div className="details-element" key={bike.model}>
+          <img src={bike.picture} alt={bike.model}/>
+          <div className="bike-data">
+            <ul>
+              <li><h2>{bike.model}</h2></li>
+              <li><h3 id="vespa-promo">- $350 deposit upon any Vespa Purchase!</h3></li>
+              <li id="vespa-money" className="bg-gray"><h3>Finance fees</h3> <span>${bike.finance}</span></li>
+              <li id="vespa-money"><h3>Option to purchase fee</h3> <span>${bike.option}</span></li>
+              <li id="vespa-money" className="bg-gray"><h3>Total ammount payable</h3> <span>${bike.total}</span></li>
+              <li id="vespa-money"><h3>Duration</h3> <span>{bike.duration} months</span></li>
+            </ul>
+            <form id="appointment" name="appointment" onSubmit={handleSubmit}>
+              <h1>Would you like to try this bike?</h1>
+              <div>
+                <input type="hidden" id="username" name="username" value={user}/>
+                <input type="hidden" id="model" name="model" value={bike.model}/>
+                <select name="cityName" id="cityName" onChange={event => handleChange(event, 'city')}>
+                  { cities.map(city => (
+                    <option key={city} value={city}>{ city }</option>
+                  )) }
+                </select>
+                <input type="date" id="start" name="date" min="2020-08-01" max="2021-12-31"/>
+                <input type="submit" value="Make appointment" id="submitBtn" />
+              </div>
+            </form>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
   }
 
   return (

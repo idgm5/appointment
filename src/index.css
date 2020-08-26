@@ -110,7 +110,8 @@ code {
   color: #e8c42e;
 }
 
-#catalogue {
+#catalogue,
+#details-page {
   height: 100%;
 }
 
@@ -232,4 +233,86 @@ code {
   padding: 0.5rem;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.details-element {
+  display: flex;
+  width: 80%;
+}
+
+.details-element > img {
+  width: 50%;
+  height: 50%;
+  align-self: center;
+}
+
+.bike-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.bike-data ul {
+  list-style: none;
+
+}
+
+.bike-data ul h2,
+.bike-data ul #vespa-promo {
+  text-align: right;
+}
+
+.bike-data ul #vespa-promo {
+  font-size: 10px;
+}
+
+#vespa-money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.bg-gray {
+  background-color: #e2e3e5;
+}
+
+.bike-data form {
+  margin-bottom: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bike-data form > h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.bike-data form > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.bike-data form > div > input,
+.bike-data form > div > select {
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0.3rem;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: lightgray;
+  appearance: none;
+  text-align: center;
+}
+
+.bike-data form > div > input:last-child {
+  background-color: #97bf0f;
+  color: white;
 }
