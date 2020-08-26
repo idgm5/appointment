@@ -131,7 +131,7 @@ code {
   justify-content: space-between;
 }
 
-.sidebar-links a {
+.sidebar-links span {
   display: block;
   font-size: 16px;
   font-weight: bold;
@@ -141,6 +141,7 @@ code {
   padding: 0.7rem;
   color: black;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 .sidebar-links > h1 {
@@ -151,7 +152,7 @@ code {
   padding: 0 1rem;
 }
 
-.sidebar a:hover {
+.sidebar span:hover {
   color: white;
   background-color: #ffb400;
 }

@@ -9,10 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Login = props => {
   const handleSubmit = event => {
-    const { addUser } = props;
+    const { addUser, history } = props;
     event.preventDefault();
     addUser(event.target.user.value);
-    props.history.push((`/${event.target.user.value}/catalogue`));
+    history.push((`/${event.target.user.value}/catalogue`));
   };
 
   return (

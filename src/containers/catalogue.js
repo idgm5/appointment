@@ -10,18 +10,20 @@ const Catalogue = props => {
   function isLoggedIn() {
     if (user === "default") {
       return (
-        <a href="/" id="back-login">You're not signed in, please login with your username in order to view this page.</a>
-      );
+        <div className="back-login">
+          <a href="/" id="back-login">You're not signed in, please login with your username in order to view this page.</a>
+        </div>
+          );
     }
     return (
         <div className="menu">
           <div className="sidebar">
             <div className="sidebar-links">
               <h1>Scespa</h1>
-              <a href="#">Models</a>
-              <a href="#">Lifestyle</a>
-              <a href="#">Shop</a>
-              <a href="#">Test Drive</a>
+              <span onClick={() => history.push((`/${user}/catalogue`))}>Models</span>
+              <span>Lifestyle</span>
+              <span>Shop</span>
+              <span onClick={() => history.push((`/appointments`))}>Test Drive</span>
             </div>
             <div className="social-icons">
               <FontAwesomeIcon icon={faTwitter} id="social-icon"/>

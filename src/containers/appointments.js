@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faFacebookF, faGoogle, faTwitter, faPinterest, faVk} from "@fortawesome/free-brands-svg-icons";
 
 const Appointments = props => {
-  const { appointments, user } = props;
+  const { appointments, user, history} = props;
   let appointmentId = 0;
 
   function isLoggedIn() {
@@ -21,10 +21,10 @@ const Appointments = props => {
       <div className="sidebar">
         <div className="sidebar-links">
           <h1>Scespa</h1>
-          <a href="#">Models</a>
-          <a href="#">Lifestyle</a>
-          <a href="#">Shop</a>
-          <a href="#">Test Drive</a>
+          <span onClick={() => history.push((`/${user}/catalogue`))}>Models</span>
+          <span>Lifestyle</span>
+          <span>Shop</span>
+          <span onClick={() => history.push((`/appointments`))}>Test Drive</span>
         </div>
         <div className="social-icons">
           <FontAwesomeIcon icon={faTwitter} id="social-icon"/>
