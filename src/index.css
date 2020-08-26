@@ -155,7 +155,6 @@ code {
 }
 
 .social-icons {
-  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -169,4 +168,68 @@ code {
 .social-icons > p {
   color: gray;
   font-size: 12px;
+}
+
+.menu-bikes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+.menu-bikes > h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.menu-bikes > h3 {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 3rem;
+}
+
+.bikes {
+  display: flex;
+}
+
+.catalogue-element {
+  width: 33%;
+}
+
+.catalogue-element ul {
+  list-style: none;
+  text-align: center;
+}
+
+.catalogue-element img {
+  max-width: 70%;
+}
+
+#picture-background {
+  border-radius: 15px;
+  background-color: #eeeeee;
+  text-align: center;
+  height: 250px;
+  cursor: pointer;
+}
+
+.catalogue-element h2 {
+  font-size: 16px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.catalogue-element p {
+  color: gray;
+  line-height: 1.5rem;
+}
+
+#bikes-social > #social-icon {
+  margin: 0.5rem;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
 }

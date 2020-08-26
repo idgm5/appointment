@@ -11,28 +11,31 @@ import combineReducers from './reducers/index';
 const initialState = {
   bikes: [
     {
-      model: "VESPA C20",
+      model: "VESPAC20",
       description: "The VESPA C20 is a stunning moped with a modern electronic system and more.",
       finance: 129,
       option: 249,
       total: 9879,
       duration: 48,
+      picture: "https://i.imgur.com/ab4e7GK.png"
     },
     {
-      model: "VESPA 946",
-      description: "The VESPA 946 is our heritage model and boots the classical look with all the modern goods.",
+      model: "VESPA946",
+      description: "The VESPA 946 is our heritage model and boots the classical look with all the goods.",
       finance: 129,
       option: 249,
       total: 9879,
       duration: 48,
+      picture: "https://i.imgur.com/yd4x5kp.png"
     },
     {
-      model: "VESPA 820",
-      description: "Our 820 model is the base VESPA which is not only very addorable but so much more.",
+      model: "VESPA820",
+      description: "Our 820 model is the base VESPA with a modern electronic system and more.",
       finance: 129,
       option: 249,
       total: 9879,
       duration: 48,
+      picture: "https://i.imgur.com/FjvlvS1.png"
     }
   ],
   user: "default",
