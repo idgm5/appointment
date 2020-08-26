@@ -370,7 +370,11 @@ code {
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
   .container,
-  .login-icons {
+  .login-icons,
+  .catalogue-element,
+  .details-element > img,
+  .bike-data,
+  .details-element {
     width: 100%;
   }
 
@@ -387,20 +391,30 @@ code {
     background-size: 60vh;
   }
 
-  #loginForm > h1 {
+  #loginForm > h1,
+  .bike-data form > h1 {
     text-align: center;
   }
-  
+
   .sidebar {
     display: none;
   }
 
   .menu,
-  .bikes {
+  .bikes,
+  .details-element {
     flex-direction: column;
   }
 
-  .catalogue-element {
-    width: 100%;
+  .bike-data {
+    margin: 0 -1rem;
+  }
+
+  .bike-data > form {
+    margin: 0 1rem;
+  }
+
+  .bike-data form > h1 {
+    font-size: 16px;
   }
 }
