@@ -6,5 +6,5 @@ import appointments from './appointments';
 export default combineReducers({
   bikes,
   user,
-  appointments
+  appointments,
 });
