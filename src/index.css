@@ -502,7 +502,8 @@ code {
     }
 
     .menu,
-    .bikes {
+    .bikes,
+    .details-element {
       flex-direction: row;
     }
 
@@ -517,5 +518,17 @@ code {
 
     .catalogue-element img {
       max-width: 67%;
+    }
+
+    .details-element > img {
+      width: 74%;
+    }
+
+    .bike-data > form {
+      margin: auto;
+    }
+
+    .bike-data {
+      margin: 0 1rem;
     }
   }
