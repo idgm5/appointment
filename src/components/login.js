@@ -28,7 +28,7 @@ const Login = props => {
       <form id="loginForm" name="loginForm" onSubmit={handleSubmit}>
         <h1>The new vespa trident</h1>
         <div>
-          <input type="text" id="userInput" name="user" placeholder="Enter a valid username." pattern="[^\s]+" title="Don't use spaces" />
+          <input type="text" id="userInput" name="user" placeholder="enter a username" pattern="[^\s]+" title="Don't use spaces" />
           <input type="submit" value="Login" id="submitBtn" />
         </div>
       </form>
