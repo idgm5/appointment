@@ -482,6 +482,10 @@ code {
     #list-appointments ul {
       padding: 0;
     }
+
+    .catalogue-element img {
+      max-width: 35%;
+    }
 }
 
 @media only screen
@@ -491,5 +495,27 @@ code {
   and (-webkit-min-device-pixel-ratio: 1) {
     .container {
       width: 1024px;
+    }
+
+    .sidebar {
+      display: flex;
+    }
+
+    .menu,
+    .bikes {
+      flex-direction: row;
+    }
+
+    .menu-bikes {
+      justify-content: inherit;
+      width: 75%;
+    }
+
+    #picture-background {
+      height: 150px;
+    }
+
+    .catalogue-element img {
+      max-width: 67%;
     }
   }
