@@ -434,8 +434,7 @@ code {
     .catalogue-element,
     .details-element > img,
     .bike-data,
-    .details-element,
-    #list-appointments ul > li {
+    .details-element {
       width: 100%;
     }
 
