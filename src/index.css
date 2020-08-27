@@ -423,3 +423,73 @@ code {
     padding: 0;
   }
 }
+
+/* Tablet portrait & landscape screens */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .container,
+    .login-icons,
+    .catalogue-element,
+    .details-element > img,
+    .bike-data,
+    .details-element,
+    #list-appointments ul > li {
+      width: 100%;
+    }
+
+    .login-icons {
+      margin: 0;
+    }
+
+    .login-icons > div {
+      width: auto;
+      padding: 1rem;
+    }
+
+    .login {
+      background-size: 90vh;
+    }
+
+    #loginForm > h1,
+    .bike-data form > h1 {
+      text-align: center;
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .menu,
+    .bikes,
+    .details-element {
+      flex-direction: column;
+    }
+
+    .bike-data {
+      margin: 0 -1rem;
+    }
+
+    .bike-data > form {
+      margin: 0 1rem;
+    }
+
+    .bike-data form > h1 {
+      font-size: 16px;
+    }
+
+    #list-appointments ul {
+      padding: 0;
+    }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+      width: 1024px;
+    }
+  }
