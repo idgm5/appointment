@@ -12,9 +12,11 @@ import {
   faFacebookF, faGoogle, faTwitter, faPinterest, faVk,
 } from '@fortawesome/free-brands-svg-icons';
 
+
 const Catalogue = props => {
   const { bikes, user, history } = props;
-
+  console.log(bikes);
+  
   function isLoggedIn() {
     if (user === 'default') {
       return (
@@ -47,10 +49,10 @@ const Catalogue = props => {
           <h3>Please select a Vespa Model</h3>
           <div className="bikes">
             {bikes.map(bike => (
-              <div className="catalogue-element" key={bike.model}>
+              <div className="catalogue-element" key={bike.modelName}>
                 <ul>
-                  <li id="picture-background"><img src={bike.picture} alt="vespa-bike" onClick={() => history.push((`/bike/${bike.model}`))} /></li>
-                  <li><h2 onClick={() => history.push((`/bike/${bike.model}`))}>{bike.model}</h2></li>
+                  <li id="picture-background"><img src={bike.picture} alt="vespa-bike" onClick={() => history.push((`/bike/${bike.modelName}`))} /></li>
+                  <li><h2 onClick={() => history.push((`/bike/${bike.modelName}`))}>{bike.modelName}</h2></li>
                   <li><p>{bike.description}</p></li>
                   <li id="bikes-social">
                     <FontAwesomeIcon icon={faTwitter} id="social-icon" />

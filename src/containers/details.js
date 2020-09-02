@@ -67,12 +67,12 @@ const Details = props => {
             <p>© 2020 Isaac González</p>
           </div>
         </div>
-        {bikes.filter(bike => bike.model === model).map(bike => (
-          <div className="details-element" key={bike.model}>
-            <img src={bike.picture} alt={bike.model} />
+        {bikes.filter(bike => bike.modelName === model).map(bike => (
+          <div className="details-element" key={bike.modelName}>
+            <img src={bike.picture} alt={bike.modelName} />
             <div className="bike-data">
               <ul>
-                <li><h2>{bike.model}</h2></li>
+                <li><h2>{bike.modelName}</h2></li>
                 <li><h3 id="vespa-promo">- $350 deposit upon any Vespa Purchase!</h3></li>
                 <li id="vespa-money" className="bg-gray">
                   <h3>Finance fees</h3>
@@ -112,7 +112,7 @@ const Details = props => {
                 <h1>Would you like to try this bike?</h1>
                 <div>
                   <input type="hidden" id="username" name="username" value={user} />
-                  <input type="hidden" id="model" name="model" value={bike.model} />
+                  <input type="hidden" id="model" name="model" value={bike.modelName} />
                   <select name="cityName" id="cityName" onChange={event => handleChange(event, 'city')}>
                     { cities.map(city => (
                       <option key={city} value={city}>{ city }</option>

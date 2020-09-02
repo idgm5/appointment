@@ -5,7 +5,7 @@ function bikes(state = [], action) {
     case ADD_BIKE:
       return [
         ...state,
-        ...action.bike,
+        action.item,
       ];
     default:
       return state;
