@@ -13,11 +13,13 @@ import {
 import { NEW_APPOINTMENT } from '../actions/index';
 
 const Appointments = props => {
-  const { appointments, user, history, addAppointment } = props;
+  const {
+    appointments, user, history, addAppointment,
+  } = props;
   let appointmentId = 0;
 
   useEffect(() => {
-    fetch(`https://vespa-backend.herokuapp.com/api/v1/appointments`)
+    fetch('https://vespa-backend.herokuapp.com/api/v1/appointments')
       .then(res => res.json())
       .then(
         result => {

@@ -16,7 +16,7 @@ const Login = props => {
   };
 
   useEffect(() => {
-    fetch(`https://vespa-backend.herokuapp.com/api/v1/bikes`)
+    fetch('https://vespa-backend.herokuapp.com/api/v1/bikes')
       .then(res => res.json())
       .then(
         result => {
@@ -53,7 +53,7 @@ const mapDispatchToProps = dispatch => ({
   },
   addBikes: bike => {
     dispatch(NEW_BIKE(bike));
-  }
+  },
 });
 
 Login.propTypes = {

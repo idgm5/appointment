@@ -5,6 +5,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable no-unused-vars */
 
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
@@ -35,23 +36,23 @@ const Details = props => {
       city: currentCity.city,
       date: event.target.date.value ? event.target.date.value : '2020-08-01',
     };
-    fetch("https://vespa-backend.herokuapp.com/api/v1/appointments/", {
-      method: "POST",
+    fetch('https://vespa-backend.herokuapp.com/api/v1/appointments/', {
+      method: 'POST',
       headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         user: appointment.user,
         model: appointment.model,
         city: appointment.city,
         date: appointment.date,
-      })
+      }),
     })
-    .then(response => response.json())
-    .then(result => {
-      history.push(('/appointments'));
-    })
+      .then(response => response.json())
+      .then(result => {
+        history.push(('/appointments'));
+      });
   };
 
   function isLoggedIn() {
