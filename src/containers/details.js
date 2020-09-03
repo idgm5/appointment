@@ -14,11 +14,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF, faGoogle, faTwitter, faPinterest, faVk,
 } from '@fortawesome/free-brands-svg-icons';
-import { NEW_APPOINTMENT } from '../actions/index';
 
 const Details = props => {
   const {
-    bikes, user, addAppointment, history,
+    bikes, user, history,
   } = props;
   const [currentCity, setCity] = useState({ city: 'Mexico City' });
   const { model } = props.match.params;
@@ -36,8 +35,23 @@ const Details = props => {
       city: currentCity.city,
       date: event.target.date.value ? event.target.date.value : '2020-08-01',
     };
-    addAppointment(appointment);
-    history.push(('/appointments'));
+    fetch("https://vespa-backend.herokuapp.com/api/v1/appointments/", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        user: appointment.user,
+        model: appointment.model,
+        city: appointment.city,
+        date: appointment.date,
+      })
+    })
+    .then(response => response.json())
+    .then(result => {
+      history.push(('/appointments'));
+    })
   };
 
   function isLoggedIn() {
@@ -141,19 +155,12 @@ const mapStateToProps = state => ({
   user: state.user,
 });
 
-const mapDispatchToProps = dispatch => ({
-  addAppointment: appointment => {
-    dispatch(NEW_APPOINTMENT(appointment));
-  },
-});
-
 Details.propTypes = {
   bikes: PropTypes.array.isRequired,
   user: PropTypes.string.isRequired,
-  addAppointment: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Details));
+export default connect(mapStateToProps)(withRouter(Details));

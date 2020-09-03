@@ -4,19 +4,29 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF, faGoogle, faTwitter, faPinterest, faVk,
 } from '@fortawesome/free-brands-svg-icons';
-
+import { NEW_APPOINTMENT } from '../actions/index';
 
 const Catalogue = props => {
-  const { bikes, user, history } = props;
-  console.log(bikes);
-  
+  const { bikes, user, history, addAppointment} = props;
+
+  useEffect(() => {
+    fetch(`https://vespa-backend.herokuapp.com/api/v1/appointments`)
+      .then(res => res.json())
+      .then(
+        result => {
+          result.map(appointment => addAppointment(appointment));
+        },
+      );
+  // eslint-disable-next-line
+  }, []);
+
   function isLoggedIn() {
     if (user === 'default') {
       return (
@@ -79,12 +89,19 @@ const mapStateToProps = state => ({
   user: state.user,
 });
 
+const mapDispatchToProps = dispatch => ({
+  addAppointment: appointment => {
+    dispatch(NEW_APPOINTMENT(appointment));
+  },
+});
+
 Catalogue.propTypes = {
   bikes: PropTypes.array.isRequired,
   user: PropTypes.string.isRequired,
+  addAppointment: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default connect(mapStateToProps)(Catalogue);
+export default connect(mapStateToProps, mapDispatchToProps)(Catalogue);
