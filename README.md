@@ -23,8 +23,9 @@ Run  `npm install` and then `npm start` finally open your web browser at `http:/
 
 ## API Endpoints
 
-[Hosted on Heroku - Bikes](https://vespa-backend.herokuapp.com/api/v1/bikes)
-[Hosted on Heroku - Appointments](https://vespa-backend.herokuapp.com/api/v1/appointments)
+- [Hosted on Heroku - Bikes](https://vespa-backend.herokuapp.com/api/v1/bikes)
+
+- [Hosted on Heroku - Appointments](https://vespa-backend.herokuapp.com/api/v1/appointments)
 
 ## Extra Feature
 - Web App is responsive for mobile, tablets and desktop screens.
