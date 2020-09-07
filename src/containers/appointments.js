@@ -11,6 +11,7 @@ import {
   faFacebookF, faGoogle, faTwitter, faPinterest, faVk,
 } from '@fortawesome/free-brands-svg-icons';
 import { NEW_APPOINTMENT } from '../actions/index';
+const _ = require('lodash');
 
 const Appointments = props => {
   const {
@@ -29,6 +30,8 @@ const Appointments = props => {
   // eslint-disable-next-line
   }, []);
 
+  let unique = _.uniqWith(appointments, _.isEqual);
+  
   function isLoggedIn() {
     if (user === 'default') {
       return (
@@ -64,8 +67,8 @@ const Appointments = props => {
             <li><h3>City</h3></li>
             <li><h3>Date</h3></li>
           </ul>
-          {appointments.filter(data => data.user === user).map(data => (
-            <ul key={data.model}>
+          {unique.filter(data => data.user === user).map(data => (
+            <ul key={data.id}>
               <li className="lightgray">
                 <h3>
                   #

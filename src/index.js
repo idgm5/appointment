@@ -11,7 +11,15 @@ import combineReducers from './reducers/index';
 const initialState = {
   bikes: [],
   user: 'default',
-  appointments: [],
+  appointments: [
+    {
+      id: 999,
+      model: "default",
+      city: "default",
+      date: "2020-01-01",
+      user: "default",
+    }
+  ],
 };
 
 const store = createStore(combineReducers, initialState);
