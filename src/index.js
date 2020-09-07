@@ -14,11 +14,11 @@ const initialState = {
   appointments: [
     {
       id: 999,
-      model: "default",
-      city: "default",
-      date: "2020-01-01",
-      user: "default",
-    }
+      model: 'default',
+      city: 'default',
+      date: '2020-01-01',
+      user: 'default',
+    },
   ],
 };
 

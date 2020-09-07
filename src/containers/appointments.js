@@ -11,6 +11,7 @@ import {
   faFacebookF, faGoogle, faTwitter, faPinterest, faVk,
 } from '@fortawesome/free-brands-svg-icons';
 import { NEW_APPOINTMENT } from '../actions/index';
+
 const _ = require('lodash');
 
 const Appointments = props => {
@@ -30,7 +31,7 @@ const Appointments = props => {
   // eslint-disable-next-line
   }, []);
 
-  let unique = _.uniqWith(appointments, _.isEqual);
+  const unique = _.uniqWith(appointments, _.isEqual);
 
   function isLoggedIn() {
     if (user === 'default') {
