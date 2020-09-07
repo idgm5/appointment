@@ -31,7 +31,7 @@ const Appointments = props => {
   }, []);
 
   let unique = _.uniqWith(appointments, _.isEqual);
-  
+
   function isLoggedIn() {
     if (user === 'default') {
       return (
@@ -49,6 +49,7 @@ const Appointments = props => {
             <span>Lifestyle</span>
             <span>Shop</span>
             <span onClick={() => history.push(('/appointments'))}>Test Drive</span>
+            <span onClick={() => window.location.reload()}>Log Out</span>
           </div>
           <div className="social-icons">
             <FontAwesomeIcon icon={faTwitter} id="social-icon" />

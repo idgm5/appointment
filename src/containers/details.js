@@ -72,6 +72,7 @@ const Details = props => {
             <span>Lifestyle</span>
             <span>Shop</span>
             <span onClick={() => history.push(('/appointments'))}>Test Drive</span>
+            <span onClick={() => window.location.reload()}>Log Out</span>
           </div>
           <div className="social-icons">
             <FontAwesomeIcon icon={faTwitter} id="social-icon" />
