@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+@font-face {
+  font-family: 'Vespa';
+  src: url('/vespa.ttf') format('truetype');
+
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+.container {
+  width: 1300px;
+  height: 100vh;
+}
+
+.login {
+  height: 100%;
+  background-color: #ffb400;
+  background-image: url("/vespa_bg.png");
+  background-repeat: no-repeat;
+  background-size: 160vh;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-links > h1 {
+  font-family: 'Vespa', sans-serif;
+  color: #595959;
+  margin-bottom: 40%;
+  transform: rotate(-10deg);
+  padding: 0 1rem;
+}
+
+.menu-bikes > h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.bike-data form > h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#loginForm > h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 10px;
+}
+
+.login-icons > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.bike-data form > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+#loginForm > div {
+  border: 1px solid transparent;
+  background: #96bf1e;
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+.bike-data form > div > input,
+.bike-data form > div > select {
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0.3rem;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: lightgray;
+  appearance: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bike-data form > div > input:last-child {
+  background-color: #97bf0f;
+  color: white;
+}
+
+#loginForm > div > input {
+  margin: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#loginForm > div > input:last-child {
+  border-left: 1px solid white;
+  padding-left: 1rem;
+  margin-left: -1rem;
+  cursor: pointer;
+}
+
+.login-icons {
+  position: absolute;
+  top: 0;
+  width: 1240px;
+  margin-left: 2rem;
+}
+
+.sidebar-links span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  padding: 0.7rem;
+  color: black;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.login-icons > div > span {
+  width: 35px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 0.4rem;
+  cursor: pointer;
+}
+
+#icon-bars {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+#icon-loop {
+  color: #e8c42e;
+}
+
+#catalogue,
+#details-page,
+#appointments {
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: white;
+  overflow-x: hidden;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar span:hover {
+  color: white;
+  background-color: #ffb400;
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+}
+
+.social-icons > #social-icon {
+  color: black;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 14px;
+}
+
+.social-icons > p {
+  color: gray;
+  font-size: 12px;
+}
+
+.menu-bikes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+.menu-bikes > h3 {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 3rem;
+}
+
+.bikes {
+  display: flex;
+}
+
+.catalogue-element {
+  width: 33%;
+}
+
+.catalogue-element ul {
+  list-style: none;
+  text-align: center;
+}
+
+.catalogue-element img {
+  max-width: 70%;
+}
+
+#picture-background {
+  border-radius: 15px;
+  background-color: #eee;
+  text-align: center;
+  height: 250px;
+  cursor: pointer;
+}
+
+.catalogue-element h2 {
+  font-size: 16px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.catalogue-element p {
+  color: gray;
+  line-height: 1.5rem;
+}
+
+#bikes-social > #social-icon {
+  margin: 0.5rem;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.details-element {
+  display: flex;
+  width: 80%;
+}
+
+.details-element > img {
+  width: 50%;
+  height: 50%;
+  align-self: center;
+}
+
+.bike-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.bike-data ul {
+  list-style: none;
+}
+
+.bike-data ul h2,
+.bike-data ul #vespa-promo {
+  text-align: right;
+}
+
+.bike-data ul #vespa-promo {
+  font-size: 10px;
+}
+
+#vespa-money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.bg-gray {
+  background-color: #e2e3e5;
+}
+
+.bike-data form {
+  margin-bottom: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#list-appointments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  text-align: center;
+}
+
+#list-appointments ul {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#list-appointments ul > li {
+  width: 150px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+#list-appointments ul > li:not(:last-child) {
+  border-right: 1px solid darkgray;
+}
+
+.lightgray {
+  background-color: #e2e3e5 !important;
+  border-color: lightgray !important;
+}
+
+.back-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+#back-login {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/* Mobile portrait & landscape screens */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container,
+  .login-icons,
+  .catalogue-element,
+  .details-element > img,
+  .bike-data,
+  .details-element,
+  #list-appointments ul > li {
+    width: 100%;
+  }
+
+  .login-icons {
+    margin: 0;
+  }
+
+  .login-icons > div {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .login {
+    background-size: 60vh;
+  }
+
+  .bike-data form > h1 {
+    font-size: 16px;
+  }
+
+  .bike-data form > h1,
+  #loginForm > h1 {
+    text-align: center;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .menu,
+  .bikes,
+  .details-element {
+    flex-direction: column;
+  }
+
+  .bike-data {
+    margin: 0 -1rem;
+  }
+
+  .bike-data > form {
+    margin: 0 1rem;
+  }
+
+  #list-appointments ul {
+    padding: 0;
+  }
+}
+
+/* Tablet portrait & landscape screens */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .container,
+  .login-icons,
+  .catalogue-element,
+  .details-element > img,
+  .bike-data,
+  .details-element {
+    width: 100%;
+  }
+
+  .login-icons {
+    margin: 0;
+  }
+
+  .login-icons > div {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .login {
+    background-size: 90vh;
+  }
+
+  .bike-data form > h1 {
+    font-size: 16px;
+  }
+
+  .bike-data form > h1,
+  #loginForm > h1 {
+    text-align: center;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .menu,
+  .bikes,
+  .details-element {
+    flex-direction: column;
+  }
+
+  .bike-data {
+    margin: 0 -1rem;
+  }
+
+  .bike-data > form {
+    margin: 0 1rem;
+  }
+
+  #list-appointments ul {
+    padding: 0;
+  }
+
+  .catalogue-element img {
+    max-width: 35%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .container {
+    width: 1024px;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  .menu,
+  .bikes,
+  .details-element {
+    flex-direction: row;
+  }
+
+  .menu-bikes {
+    justify-content: inherit;
+    width: 75%;
+  }
+
+  #picture-background {
+    height: 150px;
+  }
+
+  .catalogue-element img {
+    max-width: 67%;
+  }
+
+  .details-element > img {
+    width: 50%;
+  }
+
+  .bike-data > form {
+    margin: auto;
+  }
+
+  .bike-data {
+    margin: 0 1rem;
+  }
+}
